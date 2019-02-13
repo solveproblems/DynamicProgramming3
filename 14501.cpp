@@ -25,10 +25,7 @@ int calc(int ord) {
 
 	res = 0;
 
-	if (jobs[ord].time == 1) {
-		res = calc(ord +jobs[ord].time) + jobs[ord].pay;
-	}
-	else if (ord+jobs[ord].time > n) {
+	if (ord+jobs[ord].time > n) {
 		res = calc(ord+1);
 	}
 	else {
